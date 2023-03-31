@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Contribute - SupTube</title>
+
+    <meta name="description" content="All the contributing details about the SupTube app.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+		<link rel="icon" href="favicon.png">
+
+		<style>
+			#heading{
+				padding: 20px 0px;
+			}
+			button{
+				font-size: 14px;
+				line-height: 20px;
+				margin: 0px 5px;
+				padding: 10px 14px;
+				border-radius: 6px;
+				font-weight: 600;
+				box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+			}
+			#paypal-btn{
+				color: #fff;
+				background: #1e3a8a;
+			}
+			#paypal-btn:hover{
+				background: #1e40af;
+			}
+			#fork-btn{
+				color: #fff;
+				background: #701a75;
+			}
+			#fork-btn:hover{
+				background: #86198f;
+			}
+			#share-btn{
+				background: #15803d;
+			}
+			#share-btn:hover{
+				background: #16a34a;
+			}
+			#copy-btn{
+				background: #15803d;
+				border-radius: 0px 6px 6px 0px;
+			}
+			#copy-btn:hover{
+				background: #16a34a;
+			}
+			.url{
+				color: #000;
+				background: #fff;
+				padding: 7px 10px;
+				margin: 0px -10px 0px 0px;
+				border-radius: 6px 0px 0px 6px;
+				outline: none;
+				user-select: none;
+				-webkit-user-select: none;
+  			-ms-user-select: none;
+			}
+			
+			@media (max-width: 600px) {
+				#copy-btn{
+					display: none;
+				}
+				.url{
+					display: none;
+				}
+			} 
+			@media (min-width: 600px) {
+				#share-btn{
+					display: none;
+				}
+			} 
+		</style>
+
+</head>
+
+<body>
+
+    <!-- HEADER START ============================================================================-->
+		<div style="height: 100vh; width: 100vw; background-image: url(https://i.postimg.cc/65ZmFcD6/banner.webp); object-fit: cover;">
+			
+    	<div class="flex flex-col items-center justify-center" style="height: 100%; width: 100%;">
+				<div id="heading" class="text-white text-center">
+					<h1 class="text-3xl font-semibold">CONTRIBUTE:</h1>
+				</div>
+				<div class="text-white">
+					<a href="https://github.com/sandunwira/SupTube/fork" target="_blank">
+						<button id="fork-btn">FORK</button>
+					</a>
+					<button id="share-btn">SHARE</button>
+					
+					<input type="text" class="url" id="url-input" value="https://github.com/sandunwira/SupTube">
+					<button id="copy-btn">SHARE</button>
+				</div>
+				<div id="heading" class="text-white text-center">
+					<h1 class="text-3xl font-semibold">SPONSOR:</h1>
+				</div>
+				<div class="text-white">
+					<a href="https://www.paypal.com/donate/?hosted_button_id=9VH548R7ZDWWG" target="_blank">
+						<button id="paypal-btn">PAYPAL</button>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+    <!--============================================================================== HEADER END -->
+
+	<script>
+		const shareButton = document.getElementById('share-btn');
+
+		shareButton.addEventListener('click', async () => {
+  		try {
+    		await navigator.share({
+					text: 'Hey, Check out SupTube. A lightweight YouTube client for Windows',
+      		url: 'https://github.com/sandunwira/SupTube'
+    		});
+    		console.log('Link shared successfully.');
+  		} 
+			catch (error) {
+    		console.error('Error sharing link:', error);
+  		}
+		});
+	</script>
+
+	<script>
+		// Get the input and button elements
+		const input = document.getElementById("url-input");
+		const button = document.getElementById("copy-btn");
+
+		// Add a click event listener to the button
+		button.addEventListener("click", function() {
+  	// Select the text in the input field
+  	input.select();
+  
+  	// Use the Clipboard API to copy the text to the clipboard
+  	navigator.clipboard.writeText(input.value)
+    	.then(() => {
+      	console.log('Text copied to clipboard');
+    	})
+    	.catch((err) => {
+      	console.error('Error copying text: ', err);
+    	});
+		});
+	</script>
+
+</body>
+
+</html>
