@@ -15,6 +15,25 @@
 		<link rel="icon" href="favicon.png">
 
 		<style>
+			/* ===== Scrollbar CSS ===== */
+			*{
+				scrollbar-width: thin; /* For Firefox */
+			}
+			*::-webkit-scrollbar {
+				width: 7px;
+			}
+			*::-webkit-scrollbar-track {
+  			background: transparent;
+			}
+			*::-webkit-scrollbar-thumb {
+  			background-color: #ababab;
+			}
+			*::-webkit-scrollbar-thumb:hover {
+				background-color: #8f8f8f;
+			}
+			*::-webkit-scrollbar-thumb:active {
+				background-color: #7a7a7a;
+			}
 			#heading{
 				padding: 20px 0px;
 			}
@@ -54,6 +73,16 @@
 			#copy-btn:hover{
 				background: #16a34a;
 			}
+			#back-btn{
+				color: #000;
+				background: #e2e8f0;
+				font-weight: bold;
+				padding: 5px 10px;
+				border-radius: 25px 25px;
+			}
+			#back-btn:hover{
+				background: #f8fafc;
+			}
 			.url{
 				color: #000;
 				background: #fff;
@@ -88,7 +117,7 @@
     <!-- HEADER START ============================================================================-->
 		<div style="height: 100vh; width: 100vw; background-image: url(https://i.postimg.cc/65ZmFcD6/banner.webp); background-size: cover;">
 			
-    	<div class="flex flex-col items-center justify-center" style="height: 100%; width: 100%;">
+    	<div class="flex flex-col items-center justify-center" style="height: 85%; width: 100%;">
 				<div id="heading" class="text-white text-center">
 					<h1 class="text-3xl font-semibold">CONTRIBUTE:</h1>
 				</div>
@@ -107,6 +136,14 @@
 				<div class="text-white">
 					<a href="https://www.paypal.com/donate/?hosted_button_id=9VH548R7ZDWWG" target="_blank">
 						<button id="paypal-btn">PAYPAL</button>
+					</a>
+				</div>
+			</div>
+
+			<div class="flex flex-col items-center justify-center" style="height: 15%; width: 100%;">
+				<div class="text-white">
+					<a id="back-btn" class="text-sm font-semibold" href="https://suptube.repl.co">
+						HOME
 					</a>
 				</div>
 			</div>
