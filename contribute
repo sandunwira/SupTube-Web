@@ -1,194 +1,267 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Contribute - SupTube</title>
 
-    <meta name="description" content="All the contributing details about the SupTube app.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Contribute - SupTube" />
+    <meta
+      name="description"
+      content="All the contributing details about the SupTube app."
+    />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suptube.repl.co/contribute" />
+    <meta property="og:title" content="Contribute - SupTube" />
+    <meta
+      property="og:description"
+      content="All the contributing details about the SupTube app."
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/kXq4FFg5/preview.webp"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://suptube.repl.co/contribute" />
+    <meta name="twitter:title" content="Contribute - SupTube" />
+    <meta
+      name="twitter:description"
+      content="All the contributing details about the SupTube app."
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.postimg.cc/kXq4FFg5/preview.webp"
+    />
 
-    <link rel="stylesheet" href="./style.css">
-		<link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="favicon.png" />
 
-		<style>
-			/* ===== Scrollbar CSS ===== */
-			*{
-				scrollbar-width: thin; /* For Firefox */
-			}
-			*::-webkit-scrollbar {
-				width: 7px;
-			}
-			*::-webkit-scrollbar-track {
-  			background: transparent;
-			}
-			*::-webkit-scrollbar-thumb {
-  			background-color: #ababab;
-			}
-			*::-webkit-scrollbar-thumb:hover {
-				background-color: #8f8f8f;
-			}
-			*::-webkit-scrollbar-thumb:active {
-				background-color: #7a7a7a;
-			}
-			#heading{
-				padding: 20px 0px;
-			}
-			button{
-				font-size: 14px;
-				line-height: 20px;
-				margin: 0px 5px;
-				padding: 10px 14px;
-				border-radius: 6px;
-				font-weight: 600;
-				box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-			}
-			#paypal-btn{
-				color: #fff;
-				background: #1e3a8a;
-			}
-			#paypal-btn:hover{
-				background: #1e40af;
-			}
-			#fork-btn{
-				color: #fff;
-				background: #701a75;
-			}
-			#fork-btn:hover{
-				background: #86198f;
-			}
-			#share-btn{
-				background: #15803d;
-			}
-			#share-btn:hover{
-				background: #16a34a;
-			}
-			#copy-btn{
-				background: #15803d;
-				border-radius: 0px 6px 6px 0px;
-			}
-			#copy-btn:hover{
-				background: #16a34a;
-			}
-			#back-btn{
-				color: #000;
-				background: #e2e8f0;
-				font-weight: bold;
-				padding: 5px 10px;
-				border-radius: 25px 25px;
-			}
-			#back-btn:hover{
-				background: #f8fafc;
-			}
-			.url{
-				color: #000;
-				background: #fff;
-				padding: 7px 10px;
-				margin: 0px -10px 0px 0px;
-				border-radius: 6px 0px 0px 6px;
-				outline: none;
-				user-select: none;
-				-webkit-user-select: none;
-  			-ms-user-select: none;
-			}
-			
-			@media (max-width: 600px) {
-				#copy-btn{
-					display: none;
-				}
-				.url{
-					display: none;
-				}
-			} 
-			@media (min-width: 600px) {
-				#share-btn{
-					display: none;
-				}
-			} 
-		</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link
+      rel="preload"
+      href="/Radwave.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
 
-<body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
 
+      @font-face {
+        font-family: "Radwave";
+        src: url("/Radwave.ttf") format("truetype");
+      }
+      html {
+        font-family: "Montserrat", sans-serif;
+      }
+      .radwave {
+        font-family: "Radwave", sans-serif;
+      }
+      /* ===== Scrollbar CSS ===== */
+      * {
+        scrollbar-width: thin; /* For Firefox */
+      }
+      *::-webkit-scrollbar {
+        width: 7px;
+      }
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      *::-webkit-scrollbar-thumb {
+        background-color: #ababab;
+      }
+      *::-webkit-scrollbar-thumb:hover {
+        background-color: #8f8f8f;
+      }
+      *::-webkit-scrollbar-thumb:active {
+        background-color: #7a7a7a;
+      }
+      #heading {
+        font-family: "Radwave";
+        padding: 20px 0px;
+      }
+      button {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0px 5px;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-weight: 600;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      }
+      #paypal-btn {
+        color: #fff;
+        background: #1e3a8a;
+      }
+      #paypal-btn:hover {
+        background: #1e40af;
+      }
+      #fork-btn {
+        color: #fff;
+        background: #701a75;
+      }
+      #fork-btn:hover {
+        background: #86198f;
+      }
+      #share-btn {
+        background: #15803d;
+      }
+      #share-btn:hover {
+        background: #16a34a;
+      }
+      #copy-btn {
+        background: #15803d;
+        border-radius: 0px 6px 6px 0px;
+      }
+      #copy-btn:hover {
+        background: #16a34a;
+      }
+      #back-btn {
+        color: #000;
+        background: #e2e8f0;
+        font-weight: bold;
+        padding: 15px 20px;
+        border-radius: 25px 25px;
+      }
+      #back-btn:hover {
+        background: #f8fafc;
+      }
+      .url {
+        color: #000;
+        background: #fff;
+        padding: 7px 10px;
+        margin: 0px -10px 0px 0px;
+        border-radius: 6px 0px 0px 6px;
+        outline: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+
+      @media (max-width: 600px) {
+        #copy-btn {
+          display: none;
+        }
+        .url {
+          display: none;
+        }
+      }
+      @media (min-width: 600px) {
+        #share-btn {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- HEADER START ============================================================================-->
-		<div style="height: 100vh; width: 100vw; background-image: url(https://i.postimg.cc/65ZmFcD6/banner.webp); background-size: cover;">
-			
-    	<div class="flex flex-col items-center justify-center" style="height: 85%; width: 100%;">
-				<div id="heading" class="text-white text-center">
-					<h1 class="text-3xl font-semibold">CONTRIBUTE:</h1>
-				</div>
-				<div class="text-white">
-					<a href="https://github.com/sandunwira/SupTube/fork" target="_blank">
-						<button id="fork-btn">FORK</button>
-					</a>
-					<button id="share-btn">SHARE</button>
-					
-					<input type="text" class="url" id="url-input" value="https://github.com/sandunwira/SupTube">
-					<button id="copy-btn">SHARE</button>
-				</div>
-				<div id="heading" class="text-white text-center">
-					<h1 class="text-3xl font-semibold">SPONSOR:</h1>
-				</div>
-				<div class="text-white">
-					<a href="https://www.paypal.com/donate/?hosted_button_id=9VH548R7ZDWWG" target="_blank">
-						<button id="paypal-btn">PAYPAL</button>
-					</a>
-				</div>
-			</div>
+    <div
+      style="
+        height: 100vh;
+        width: 100vw;
+        background-image: url(https://i.postimg.cc/65ZmFcD6/banner.webp);
+        background-size: cover;
+      "
+    >
+      <div
+        class="flex flex-col items-center justify-center"
+        style="height: 85%; width: 100%"
+      >
+        <div id="heading" class="text-white text-center">
+          <h1 class="text-3xl font-semibold">CONTRIBUTE:</h1>
+        </div>
+        <div class="text-white">
+          <a href="https://github.com/sandunwira/SupTube/fork" target="_blank">
+            <button id="fork-btn">FORK</button>
+          </a>
+          <button id="share-btn">SHARE</button>
 
-			<div class="flex flex-col items-center justify-center" style="height: 15%; width: 100%;">
-				<div class="text-white">
-					<a id="back-btn" class="text-sm font-semibold" href="https://suptube.repl.co">
-						HOME
-					</a>
-				</div>
-			</div>
-			
-		</div>
+          <input
+            type="text"
+            class="url"
+            id="url-input"
+            value="https://github.com/sandunwira/SupTube"
+          />
+          <button id="copy-btn">SHARE</button>
+        </div>
+        <div id="heading" class="text-white text-center">
+          <h1 class="text-3xl font-semibold">SPONSOR:</h1>
+        </div>
+        <div class="text-white">
+          <a
+            href="https://www.paypal.com/donate/?hosted_button_id=9VH548R7ZDWWG"
+            target="_blank"
+          >
+            <button id="paypal-btn">PAYPAL</button>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center"
+        style="height: 15%; width: 100%"
+      >
+        <div class="text-white">
+          <a
+            id="back-btn"
+            class="text-sm font-semibold"
+            href="https://suptube.repl.co"
+          >
+            HOME
+          </a>
+        </div>
+      </div>
+    </div>
     <!--============================================================================== HEADER END -->
 
-	<script>
-		const shareButton = document.getElementById('share-btn');
+    <script>
+      const shareButton = document.getElementById("share-btn");
 
-		shareButton.addEventListener('click', async () => {
-  		try {
-    		await navigator.share({
-					text: 'Hey, Check out SupTube. A lightweight YouTube client for Windows',
-      		url: 'https://github.com/sandunwira/SupTube'
-    		});
-    		console.log('Link shared successfully.');
-  		} 
-			catch (error) {
-    		console.error('Error sharing link:', error);
-  		}
-		});
-	</script>
+      shareButton.addEventListener("click", async () => {
+        try {
+          await navigator.share({
+            text: "Hey, Check out SupTube. A lightweight YouTube client for Windows",
+            url: "https://github.com/sandunwira/SupTube",
+          });
+          console.log("Link shared successfully.");
+        } catch (error) {
+          console.error("Error sharing link:", error);
+        }
+      });
+    </script>
 
-	<script>
-		// Get the input and button elements
-		const input = document.getElementById("url-input");
-		const button = document.getElementById("copy-btn");
+    <script>
+      // Get the input and button elements
+      const input = document.getElementById("url-input");
+      const button = document.getElementById("copy-btn");
 
-		// Add a click event listener to the button
-		button.addEventListener("click", function() {
-  	// Select the text in the input field
-  	input.select();
-  
-  	// Use the Clipboard API to copy the text to the clipboard
-  	navigator.clipboard.writeText(input.value)
-    	.then(() => {
-      	console.log('Text copied to clipboard');
-    	})
-    	.catch((err) => {
-      	console.error('Error copying text: ', err);
-    	});
-		});
-	</script>
+      // Add a click event listener to the button
+      button.addEventListener("click", function () {
+        // Select the text in the input field
+        input.select();
 
-</body>
-
+        // Use the Clipboard API to copy the text to the clipboard
+        navigator.clipboard
+          .writeText(input.value)
+          .then(() => {
+            console.log("Text copied to clipboard");
+          })
+          .catch((err) => {
+            console.error("Error copying text: ", err);
+          });
+      });
+    </script>
+  </body>
 </html>
