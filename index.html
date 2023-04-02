@@ -3,19 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>SupTube | An opensource Windows Client for YouTube</title>
 
     <meta
-      name="description"
-      content="SupTube is an opensource Windows client created for YouTube"
+      name="title"
+      content="SupTube | An opensource Windows Client for YouTube"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SupTube is a lightweight Windows client created to enhance the YouTube experience. The app uses the Tauri framework, which includes a combination of Rust language and WebView2 engine to show YouTube videos."
+    />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suptube.repl.co" />
+    <meta
+      property="og:title"
+      content="SupTube | An opensource Windows Client for YouTube"
+    />
+    <meta
+      property="og:description"
+      content="SupTube is a lightweight Windows client created to enhance the YouTube experience. The app uses the Tauri framework, which includes a combination of Rust language and WebView2 engine to show YouTube videos."
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/kXq4FFg5/preview.webp"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://suptube.repl.co" />
+    <meta
+      name="twitter:title"
+      content="SupTube | An opensource Windows Client for YouTube"
+    />
+    <meta
+      name="twitter:description"
+      content="SupTube is a lightweight Windows client created to enhance the YouTube experience. The app uses the Tauri framework, which includes a combination of Rust language and WebView2 engine to show YouTube videos."
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.postimg.cc/kXq4FFg5/preview.webp"
+    />
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="favicon.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="/Radwave.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+      @font-face {
+        font-family: "Radwave";
+        src: url("/Radwave.ttf") format("truetype");
+      }
+      html {
+        font-family: "Montserrat", sans-serif;
+      }
+      .radwave {
+        font-family: "Radwave", sans-serif;
+      }
       #cont-btn {
         color: #fff;
         background: #c2410c;
@@ -68,7 +129,7 @@
                 INTRODUCING
               </h2>
               <p
-                class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+                class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl radwave"
               >
                 SupTube
               </p>
@@ -79,7 +140,7 @@
                 class="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none"
               >
                 <div class="relative pl-9">
-                  <dt class="inline font-semibold text-white">
+                  <dt class="inline font-semibold text-white radwave">
                     <svg
                       class="absolute top-1 left-1 h-5 w-5 text-white"
                       viewBox="0 0 24 24"
@@ -110,7 +171,7 @@
                 </div>
 
                 <div class="relative pl-9">
-                  <dt class="inline font-semibold text-white">
+                  <dt class="inline font-semibold text-white radwave">
                     <svg
                       class="absolute top-1 left-1 h-5 w-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -142,6 +203,7 @@
                   >
                     <button
                       class="flex-none rounded-md bg-red-700 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                      id="down-btn"
                     >
                       DOWNLOAD
                     </button>
@@ -180,7 +242,7 @@
         >
           <div class="max-w-xl lg:max-w-lg">
             <h2
-              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+              class="text-3xl font-bold tracking-tight text-white radwave sm:text-4xl"
             >
               STAY TUNED.
             </h2>
@@ -231,7 +293,9 @@
                   />
                 </svg>
               </div>
-              <dt class="mt-4 font-semibold text-white">NEW RELEASES</dt>
+              <dt class="mt-4 font-semibold text-white radwave">
+                NEW RELEASES
+              </dt>
               <dd class="mt-2 leading-7 text-gray-300">
                 Get emails directly to your inbox when the app release a new
                 version and stand a chance to test beta versions of the app too.
@@ -254,7 +318,7 @@
                   />
                 </svg>
               </div>
-              <dt class="mt-4 font-semibold text-white">NO SPAM</dt>
+              <dt class="mt-4 font-semibold text-white radwave">NO SPAM</dt>
               <dd class="mt-2 leading-7 text-gray-300">
                 Having spam emails is a hassle to everyone, so we send emails
                 only when we have a new release/feature.
